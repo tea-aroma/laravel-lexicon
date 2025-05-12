@@ -1,0 +1,23 @@
+{
+    "name": "tea-aroma/laravel-lexicon",
+    "description": "Lexicon is a Laravel package that helps encapsulate and manage translations, making multilingual support organized, scalable, and developer-friendly.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TeaAroma\\Lexicon\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TeaAroma\\Lexicon\\Providers\\LexiconServiceProvider"
+            ]
+        }
+    }
+}
