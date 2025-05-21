@@ -21,10 +21,12 @@ enum LexiconConfig: string
     /**
      * Gets the value from configurations.
      *
+     * @param string|null $default
+     *
      * @return string
      */
-    public function getConfig(): string
+    public function getConfig(?string $default = null): string
     {
-        return config('lexicon.' . $this->value);
+        return config('lexicon.' . $this->value, $default);
     }
 }

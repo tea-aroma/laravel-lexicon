@@ -6,7 +6,7 @@ namespace TeaAroma\Lexicon\Enums;
 /**
  * The enum contains all possible messages of errors.
  */
-enum LexiconErrors: string
+enum LexiconError: string
 {
     case INVALID_OPTIONS_TYPE = 'The given option class \'%s\' is not a subclass of \'%s\'.';
 
