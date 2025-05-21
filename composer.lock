@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf4614629070aac665f0e9c46d5482f3",
+    "content-hash": "576aa3ea918dbcccbd937d4322cc98a2",
     "packages": [
         {
             "name": "brick/math",
@@ -335,12 +335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "f93a0e410eaf0839d0b6da23454abc37a28968f2"
+                "reference": "a3c80c986a421a5c550f89e80daa0d7ac817e6cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/f93a0e410eaf0839d0b6da23454abc37a28968f2",
-                "reference": "f93a0e410eaf0839d0b6da23454abc37a28968f2",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/a3c80c986a421a5c550f89e80daa0d7ac817e6cf",
+                "reference": "a3c80c986a421a5c550f89e80daa0d7ac817e6cf",
                 "shasum": ""
             },
             "require": {
@@ -378,7 +378,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-05-13T15:08:45+00:00"
+            "time": "2025-05-21T13:18:18+00:00"
         },
         {
             "name": "illuminate/contracts",
@@ -434,12 +434,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "d410deb233d61aaf07a4f02588e011254d9fbd0b"
+                "reference": "1d3a8caca51aaadaefe622fd21efe66030a754dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/d410deb233d61aaf07a4f02588e011254d9fbd0b",
-                "reference": "d410deb233d61aaf07a4f02588e011254d9fbd0b",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/1d3a8caca51aaadaefe622fd21efe66030a754dc",
+                "reference": "1d3a8caca51aaadaefe622fd21efe66030a754dc",
                 "shasum": ""
             },
             "require": {
@@ -496,7 +496,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-05-13T15:08:45+00:00"
+            "time": "2025-05-19T17:08:35+00:00"
         },
         {
             "name": "illuminate/macroable",
@@ -550,12 +550,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "76616fc464d739426cb50a617616b3f9661dbdbc"
+                "reference": "baba29c2f895ecf2270fd19bcc0393ba1cec8648"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/76616fc464d739426cb50a617616b3f9661dbdbc",
-                "reference": "76616fc464d739426cb50a617616b3f9661dbdbc",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/baba29c2f895ecf2270fd19bcc0393ba1cec8648",
+                "reference": "baba29c2f895ecf2270fd19bcc0393ba1cec8648",
                 "shasum": ""
             },
             "require": {
@@ -619,7 +619,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-05-14T14:09:28+00:00"
+            "time": "2025-05-21T13:59:43+00:00"
         },
         {
             "name": "laravel/serializable-closure",
