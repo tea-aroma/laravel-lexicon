@@ -4,7 +4,7 @@ namespace TeaAroma\Lexicon\Enums;
 
 
 /**
- * The enum contains all possible messages of errors.
+ * Provides an error message used in this package.
  */
 enum LexiconError: string
 {
@@ -15,7 +15,7 @@ enum LexiconError: string
     case UNDEFINED_LANGUAGE = 'The \'%s\' language is not defined.';
 
     /**
-     * Formats the message of error.
+     * Formats the error message with specified arguments.
      *
      * @param string ...$args
      *

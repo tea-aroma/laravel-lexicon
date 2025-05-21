@@ -4,7 +4,7 @@ namespace TeaAroma\Lexicon\Enums;
 
 
 /**
- * The enum contains all possible configurations of this package.
+ * Provides a configuration key used in this package.
  */
 enum LexiconConfig: string
 {
