@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * The database model for the 'languages' table.
  */
-class LexiconLanguagesModel extends Model
+class LanguagesModel extends Model
 {
     /**
      * @var string
@@ -24,6 +24,6 @@ class LexiconLanguagesModel extends Model
      */
     public function fallback_language(): BelongsTo
     {
-        return $this->belongsTo(LexiconLanguagesModel::class);
+        return $this->belongsTo(LanguagesModel::class);
     }
 }

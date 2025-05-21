@@ -7,9 +7,9 @@ use Illuminate\Database\Seeder;
 
 
 /**
- * Implements the process of filling contexts.
+ * Implements the process of filling languages.
  */
-class LexiconContextsSeeder extends Seeder
+class LanguagesSeeder extends Seeder
 {
     /**
      * Run the database seeds.

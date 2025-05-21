@@ -11,7 +11,7 @@ use TeaAroma\Lexicon\Enums\LexiconConfig;
 /**
  * The database model for the each 'context' table.
  */
-class LexiconContextModel extends Model
+class ContextModel extends Model
 {
     /**
      * Returns a new instance by the given context.
@@ -22,7 +22,7 @@ class LexiconContextModel extends Model
      */
     public static function forContext(string $context): static
     {
-        return (new LexiconContextModel())->setTable(LexiconConfig::DATABASE_PREFIX->getConfig() . $context);
+        return (new ContextModel())->setTable(LexiconConfig::DATABASE_PREFIX->getConfig() . $context);
     }
 
     /**
@@ -32,7 +32,7 @@ class LexiconContextModel extends Model
      */
     public function language(): BelongsTo
     {
-        return $this->belongsTo(LexiconLanguagesModel::class);
+        return $this->belongsTo(LanguagesModel::class);
     }
 
     /**
@@ -42,6 +42,6 @@ class LexiconContextModel extends Model
      */
     public function context(): BelongsTo
     {
-        return $this->belongsTo(LexiconContextsModel::class);
+        return $this->belongsTo(ContextsModel::class);
     }
 }

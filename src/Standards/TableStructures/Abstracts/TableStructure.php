@@ -1,6 +1,6 @@
 <?php
 
-namespace TeaAroma\Lexicon\TableStructures\Abstracts;
+namespace TeaAroma\Lexicon\Standards\TableStructures\Abstracts;
 
 
 use Illuminate\Database\Schema\Blueprint;
@@ -11,7 +11,7 @@ use TeaAroma\Lexicon\Enums\LexiconConfig;
 /**
  * Provides the base logic for managing table structures.
  */
-readonly abstract class LexiconTableStructure
+readonly abstract class TableStructure
 {
     /**
      * The table name.

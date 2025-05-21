@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * The database model for the 'contexts' table.
  */
-class LexiconContextsModel extends Model
+class ContextsModel extends Model
 {
     /**
      * @var string
@@ -24,6 +24,6 @@ class LexiconContextsModel extends Model
      */
     public function language(): BelongsTo
     {
-        return $this->belongsTo(LexiconLanguagesModel::class);
+        return $this->belongsTo(LanguagesModel::class);
     }
 }

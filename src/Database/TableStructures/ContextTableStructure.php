@@ -5,13 +5,13 @@ namespace TeaAroma\Lexicon\Database\TableStructures;
 
 use Illuminate\Database\Schema\Blueprint;
 use TeaAroma\Lexicon\Enums\LexiconConfig;
-use TeaAroma\Lexicon\TableStructures\Abstracts\LexiconTableStructure;
+use TeaAroma\Lexicon\Standards\TableStructures\Abstracts\TableStructure;
 
 
 /**
  * Provides table structure for each context table.
  */
-readonly class LexiconContextTableStructure extends LexiconTableStructure
+readonly class ContextTableStructure extends TableStructure
 {
     /**
      * @inheritDoc
