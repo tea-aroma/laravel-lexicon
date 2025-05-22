@@ -25,6 +25,7 @@ readonly class ContextTableStructure extends TableStructure
         $table->id();
         $table->foreignId('language_id')->constrained(LexiconConfig::DATABASE_PREFIX->getConfig() . 'languages')->nullOnDelete();
         $table->foreignId('context_id')->constrained(LexiconConfig::DATABASE_PREFIX->getConfig() . 'contexts')->nullOnDelete();
+        $table->foreignId('type_id')->constrained(LexiconConfig::DATABASE_PREFIX->getConfig() . 'types')->nullOnDelete();
         $table->foreignId('record_id');
         $table->string('code');
         $table->string('table_name');
@@ -33,6 +34,6 @@ readonly class ContextTableStructure extends TableStructure
         $table->longText('value');
         $table->timestamps();
 
-        $table->unique([ 'language_id', 'context_id', 'record_id', 'code', 'table_name', 'attribute' ]);
+        $table->unique([ 'language_id', 'context_id', 'type_id', 'record_id', 'code', 'table_name', 'attribute' ]);
     }
 }

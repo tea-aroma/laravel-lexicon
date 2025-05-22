@@ -44,4 +44,14 @@ class ContextModel extends Model
     {
         return $this->belongsTo(ContextsModel::class);
     }
+
+    /**
+     * Type relation.
+     *
+     * @return BelongsTo
+     */
+    public function type(): BelongsTo
+    {
+        return $this->belongsTo(TypesModel::class);
+    }
 }
