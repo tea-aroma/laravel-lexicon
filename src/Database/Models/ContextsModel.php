@@ -18,6 +18,18 @@ class ContextsModel extends Model
     protected $table = 'lexicon_contexts';
 
     /**
+     * @var string[]
+     */
+    protected $fillable =
+        [
+            'code',
+            'table_name',
+            'description',
+            'is_active',
+            'is_default',
+        ];
+
+    /**
      * Language relation.
      *
      * @return BelongsTo

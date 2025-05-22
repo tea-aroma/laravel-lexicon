@@ -14,6 +14,22 @@ use TeaAroma\Lexicon\Enums\LexiconConfig;
 class ContextModel extends Model
 {
     /**
+     * @var string[]
+     */
+    protected $fillable =
+        [
+            'language_id',
+            'context_id',
+            'type_id',
+            'record_id',
+            'code',
+            'table_name',
+            'attribute',
+            'description',
+            'value',
+        ];
+
+    /**
      * Returns a new instance by the given context.
      *
      * @param string $context

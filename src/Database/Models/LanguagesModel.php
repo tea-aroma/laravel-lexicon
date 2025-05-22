@@ -18,6 +18,22 @@ class LanguagesModel extends Model
     protected $table = 'lexicon_languages';
 
     /**
+     * @var string[]
+     */
+    protected $fillable =
+        [
+            'fallback_language_id',
+            'code',
+            'name',
+            'native_name',
+            'image',
+            'locale',
+            'direction',
+            'is_active',
+            'is_default',
+        ];
+
+    /**
      * Language relation.
      *
      * @return BelongsTo
