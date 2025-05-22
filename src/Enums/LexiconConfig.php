@@ -25,7 +25,7 @@ enum LexiconConfig: string
      *
      * @return string
      */
-    public function getConfig(?string $default = null): string
+    public function getConfig(?string $default = null): mixed
     {
         return config('lexicon.' . $this->value, $default);
     }
