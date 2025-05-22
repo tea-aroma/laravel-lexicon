@@ -8,6 +8,8 @@ namespace TeaAroma\Lexicon\Enums;
  */
 enum LexiconConfig: string
 {
+    case INSTALLATION = 'installation';
+
     case STRICT_MODE = 'strict_mode';
 
     case DRIVER = 'driver';

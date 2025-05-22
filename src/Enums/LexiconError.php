@@ -8,6 +8,10 @@ namespace TeaAroma\Lexicon\Enums;
  */
 enum LexiconError: string
 {
+    case PACKAGE_NOT_INSTALLED = 'This package is not installed.';
+
+    case PACKAGE_ALREADY_INSTALLED = 'This package is already installed.';
+
     case INVALID_OPTIONS_TYPE = 'The given option class \'%s\' is not a subclass of \'%s\'.';
 
     case UNDEFINED_CONTEXT = 'The \'%s\' context is not defined.';

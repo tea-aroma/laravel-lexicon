@@ -16,7 +16,8 @@
     "require": {
         "php": "^8.2",
         "illuminate/support": "^12",
-        "illuminate/database": "^12"
+        "illuminate/database": "^12",
+        "illuminate/console": "^12"
     },
     "extra": {
         "laravel": {
