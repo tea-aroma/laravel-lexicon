@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(LexiconConfig::DATABASE_PREFIX->getConfig() . 'languages', function (Blueprint $table) {
+        Schema::create(LexiconConfig::DATABASE_PREFIX->withSuffix('languages'), function (Blueprint $table) {
             $table->id();
             $table->foreignId('fallback_language_id')
                 ->nullable()
                 ->references('id')
-                ->on(LexiconConfig::DATABASE_PREFIX->getConfig() . 'languages')->nullOnDelete();
+                ->on(LexiconConfig::DATABASE_PREFIX->withSuffix('languages'))->nullOnDelete();
             $table->string('code')->unique();
             $table->string('name');
             $table->string('native_name')->nullable();
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(LexiconConfig::DATABASE_PREFIX->getConfig() . 'languages');
+        Schema::dropIfExists(LexiconConfig::DATABASE_PREFIX->withSuffix('languages'));
     }
 };

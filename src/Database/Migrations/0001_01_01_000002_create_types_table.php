@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(LexiconConfig::DATABASE_PREFIX->getConfig() . 'types', function (Blueprint $table) {
+        Schema::create(LexiconConfig::DATABASE_PREFIX->withSuffix('types'), function (Blueprint $table) {
             $table->id();
             $table->string('code')->unique();
             $table->string('description')->nullable();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(LexiconConfig::DATABASE_PREFIX->getConfig() . 'types');
+        Schema::dropIfExists(LexiconConfig::DATABASE_PREFIX->withSuffix('types'));
     }
 };

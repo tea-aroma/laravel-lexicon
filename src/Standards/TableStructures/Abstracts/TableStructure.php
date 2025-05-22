@@ -25,7 +25,7 @@ readonly abstract class TableStructure
      */
     public function __construct(string $tableName)
     {
-        $this->tableName = LexiconConfig::DATABASE_PREFIX->getConfig() . $tableName;
+        $this->tableName = LexiconConfig::DATABASE_PREFIX->withSuffix($tableName);
     }
 
     /**

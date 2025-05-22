@@ -38,7 +38,7 @@ class ContextModel extends Model
      */
     public static function forContext(string $context): static
     {
-        return (new ContextModel())->setTable(LexiconConfig::DATABASE_PREFIX->getConfig() . $context);
+        return (new ContextModel())->setTable(LexiconConfig::DATABASE_PREFIX->withSuffix($context));
     }
 
     /**

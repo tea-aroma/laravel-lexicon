@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(LexiconConfig::DATABASE_PREFIX->getConfig() . 'contexts', function (Blueprint $table) {
+        Schema::create(LexiconConfig::DATABASE_PREFIX->withSuffix('contexts'), function (Blueprint $table) {
             $table->id();
             $table->string('code');
             $table->string('table_name');
@@ -35,6 +35,6 @@ return new class extends Migration
     {
         // Context tables dropping...
 
-        Schema::dropIfExists(LexiconConfig::DATABASE_PREFIX->getConfig() . 'contexts');
+        Schema::dropIfExists(LexiconConfig::DATABASE_PREFIX->withSuffix('contexts'));
     }
 };

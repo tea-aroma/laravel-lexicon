@@ -29,4 +29,17 @@ enum LexiconConfig: string
     {
         return config('lexicon.' . $this->value, $default);
     }
+
+    /**
+     * Gets the value from configuration with the specified suffix appended.
+     *
+     * @param string      $suffix
+     * @param string|null $default
+     *
+     * @return string
+     */
+    public function withSuffix(string $suffix, ?string $default = null): string
+    {
+        return $this->getConfig($default) . $suffix;
+    }
 }

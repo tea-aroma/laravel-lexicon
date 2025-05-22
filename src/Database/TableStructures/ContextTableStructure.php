@@ -23,9 +23,9 @@ readonly class ContextTableStructure extends TableStructure
     public function applyProcessing(Blueprint $table): void
     {
         $table->id();
-        $table->foreignId('language_id')->constrained(LexiconConfig::DATABASE_PREFIX->getConfig() . 'languages')->nullOnDelete();
-        $table->foreignId('context_id')->constrained(LexiconConfig::DATABASE_PREFIX->getConfig() . 'contexts')->nullOnDelete();
-        $table->foreignId('type_id')->constrained(LexiconConfig::DATABASE_PREFIX->getConfig() . 'types')->nullOnDelete();
+        $table->foreignId('language_id')->constrained(LexiconConfig::DATABASE_PREFIX->withSuffix('languages'))->nullOnDelete();
+        $table->foreignId('context_id')->constrained(LexiconConfig::DATABASE_PREFIX->withSuffix('contexts'))->nullOnDelete();
+        $table->foreignId('type_id')->constrained(LexiconConfig::DATABASE_PREFIX->withSuffix('types'))->nullOnDelete();
         $table->foreignId('record_id');
         $table->string('code');
         $table->string('table_name');
