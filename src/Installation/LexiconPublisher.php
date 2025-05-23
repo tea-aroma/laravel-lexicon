@@ -24,13 +24,13 @@ class LexiconPublisher
      */
     protected function getUpdatedMigrationPathname(\SplFileInfo $file): string
     {
-        $patterns = [ '/^\d{4}_\d{2}_\d{2}_\d{6}_/', '/_lexicon_/' ];
+        $patterns = [ '/^\d{4}_\d{2}_\d{2}_\d{6}_/', '/lexicon_/' ];
 
         $replacements = [ date('Y_m_d_His_'), LexiconConfig::DATABASE_PREFIX->getConfig() ];
 
         $pathname = preg_replace($patterns, $replacements, $file->getFilename());
 
-        return database_path($pathname);
+        return database_path('migrations' . DIRECTORY_SEPARATOR . $pathname);
     }
 
     /**
