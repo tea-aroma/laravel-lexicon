@@ -4,6 +4,7 @@ namespace TeaAroma\Lexicon\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
+use TeaAroma\Lexicon\Console\Commands\LexiconInstallConfig;
 use TeaAroma\Lexicon\Console\Commands\LexiconInstall;
 
 
@@ -24,10 +25,6 @@ class LexiconServiceProvider extends ServiceProvider
             $this->publishes([ __DIR__ . '/../Config/lexicon.php' => config_path('lexicon.php') ], 'lexicon-config');
 
             $this->publishes([ __DIR__.'/../Database/Seeders/' => database_path('seeders') ], 'lexicon-seeders');
-
-            $this->publishes([ __DIR__.'/../Database/Migrations/' => database_path('migrations') ], 'lexicon-migrations');
-
-            $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
         }
     }
 
@@ -38,7 +35,7 @@ class LexiconServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole())
         {
-            $this->commands([ LexiconInstall::class ]);
+            $this->commands([ LexiconInstall::class, LexiconInstallConfig::class ]);
 
             $this->mergeConfigFrom(__DIR__ . '/../Config/lexicon.php', 'lexicon');
         }

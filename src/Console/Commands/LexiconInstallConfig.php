@@ -11,23 +11,23 @@ use TeaAroma\Lexicon\Standards\FileIndicators\FileIndicators;
 
 
 /**
- * Console command for installing the Lexicon package.
+ * Console command for installing the Lexicon configurations.
  */
-class LexiconInstall extends Command
+class LexiconInstallConfig extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'lexicon:install';
+    protected $signature = 'lexicon:install-config';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Install the Lexicon package.';
+    protected $description = 'Install the configurations of the Lexicon package.';
 
     /**
      * Execute the console command.
@@ -36,16 +36,16 @@ class LexiconInstall extends Command
     {
         $installer = new LexiconInstaller();
 
-        if (FileIndicators::hasIndicator(FileIndicatorType::INSTALLED))
+        if (FileIndicators::hasIndicator(FileIndicatorType::CONFIGURATIONS_INSTALLED))
         {
-            $this->info(LexiconMessage::ALREADY_INSTALLED->format('Lexicon'));
+            $this->info(LexiconMessage::ALREADY_INSTALLED->format('Lexicon configurations'));
 
             return self::FAILURE;
         }
 
-        $installer->install();
+        $installer->installConfigurations();
 
-        $this->info(LexiconMessage::INSTALLED->format('Lexicon'));
+        $this->info(LexiconMessage::INSTALLED->format('Lexicon configurations'));
 
         return self::SUCCESS;
     }
