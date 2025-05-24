@@ -4,6 +4,8 @@ namespace TeaAroma\Lexicon\Standards\Repositories\Abstracts;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Schema;
+
 
 /**
  * Provides the abstract logic for managing database records.
@@ -40,6 +42,16 @@ abstract class Repository
     protected function getKeyName(): string
     {
         return $this->model->getKeyName();
+    }
+
+    /**
+     * Determines whether the table exists in a database.
+     *
+     * @return bool
+     */
+    public function tableExists(): bool
+    {
+        return Schema::hasTable($this->model->getTable());
     }
 
     /**
